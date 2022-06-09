@@ -6,11 +6,11 @@
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-char auth[] = "HXz7F-yngdp-PCS9zRUV5bjzfY0DyUgE";
+char auth[] = "";
 
 
-const char ssid[] = "Mark";
-const char pass[] = "12345678";
+const char ssid[] = "";
+const char pass[] = "";
 
 int logic;
 int lockloop;
@@ -40,7 +40,7 @@ void setup() {
   
    Serial.begin(9600);
     WiFi.begin(ssid, pass);
-   Blynk.config(auth,"blynk.iot-cm.com", 8080);
+   Blynk.config(auth,);
 
  pinMode(16, OUTPUT);
  digitalWrite(16, HIGH);
